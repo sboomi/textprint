@@ -29,6 +29,10 @@ def test_series_of_usernames():
 
 
 def test_discord_usernames():
+    """GIVEN Discord usernames
+    WHEN DiscordUsername parser is created
+    THEN all names must be validated
+    """
     usernames = ["Disコルド#0001", "KiBender#1234", "SkankHunt42#2134"]
 
     username_parser = DiscordUsername()

@@ -4,7 +4,13 @@ from .pattern_list import PatternTypes
 
 
 class Username(BasePattern):
-    """Pattern checking against an username with a defined length"""
+    """Pattern checking against any type of username with a defined length
+
+    :param min_len: The minimal length of the username
+    :type min_len: int
+    :param max_len: The maximal length of the username
+    :type max_len: int
+    """
 
     TYPE = PatternTypes.USERNAME
     REGEX_FORMAT_STRING = r"^[a-z0-9_-]{min_len,max_len}$"
@@ -29,6 +35,3 @@ class DiscordUsername(BasePattern):
 
     def __init__(self):
         super().__init__(flags=[re.M, re.I])
-
-    def _compile(self) -> str:
-        return self.REGEX_FORMAT_STRING

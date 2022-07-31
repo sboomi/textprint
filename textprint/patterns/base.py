@@ -7,6 +7,10 @@ class BasePattern:
     """BasePattern for all pattern classes.
 
     Compiles into a regex pattern firsthand before processing any passed string.
+
+    :param flags: The necessary `re` flags for the pattern compilation, defaults
+    to [re.M]
+    :type flags: List[re.RegexFlag], optional
     """
 
     REGEX_FORMAT_STRING = r""
@@ -16,7 +20,7 @@ class BasePattern:
     def sum_regex_flags(flags: List[re.RegexFlag]) -> int:
         """Method summing regex flags for the compilation
 
-        :param flags: list of regex flags like MULTiLINE or IGNORECASE
+        :param flags: list of regex flags like MULTILINE or IGNORECASE
         :type flags: List[re.RegexFlag]
         :return: An union of flags
         :rtype: int
@@ -35,7 +39,7 @@ class BasePattern:
         :return: The string to compile
         :rtype: str
         """
-        pass
+        return self.REGEX_FORMAT_STRING
 
     def compile(self) -> None:
         self.regex_pattern = re.compile(self._compile(), flags=self.flags)
@@ -44,7 +48,7 @@ class BasePattern:
         """Given some text, will look for several instances of the pattern and return a
         list of matches. Only takes the base group as the main result.
 
-        :param target_string: The string to look on.
+        :param target_string: The string to perform a search on.
         :type target_string: str
         :return: A list of matches or an empty list if no pattern was found
         :rtype: List[str]
