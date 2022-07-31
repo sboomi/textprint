@@ -7,8 +7,8 @@ import re
 class PhoneNumber(BasePattern):
     """Pattern checking against a phone number (regular or E164)"""
 
-    REGEX_FORMAT_STRING = r"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-    REGEX_FORMAT_STRING_E164 = r"^\+[1-9]\d{1,14}$"
+    REGEX_FORMAT_STRING = r"[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
+    REGEX_FORMAT_STRING_E164 = r"\+[1-9]\d{1,14}"
     TYPE = PatternTypes.PHONE_NUMBER
 
     def __init__(

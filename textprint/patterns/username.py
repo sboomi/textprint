@@ -13,7 +13,7 @@ class Username(BasePattern):
     """
 
     TYPE = PatternTypes.USERNAME
-    REGEX_FORMAT_STRING = r"^[a-z0-9_-]{min_len,max_len}$"
+    REGEX_FORMAT_STRING = r"\b[a-z0-9_-]{min_len,max_len}\b"
 
     def __init__(self, min_len: int, max_len: int):
         self.min_len = min_len
@@ -31,7 +31,7 @@ class DiscordUsername(BasePattern):
     text data"""
 
     TYPE = PatternTypes.USERNAME
-    REGEX_FORMAT_STRING = r"^.{3,32}#[0-9]{4}$"
+    REGEX_FORMAT_STRING = r"\b.{3,32}#[0-9]{4}\b"
 
     def __init__(self):
         super().__init__(flags=[re.M, re.I])

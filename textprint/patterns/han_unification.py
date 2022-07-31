@@ -3,6 +3,13 @@ from .base import BasePattern
 
 
 class HanUnification(BasePattern):
+    """Detects Chinese-like characters for the 3 most popular Far East languages
+
+    * Japanese (kanji-only)
+    * Korean (hanja-only)
+    * Chinese (hanzi)
+    """
+
     TYPE = PatternTypes.HAN_UNIFICATION
     REGEX_FORMAT_STRING = (
         r"^[\u4E00-\u9FFF\u3400-\u4DBF\u20000-\u2A6DF\u2A700-"

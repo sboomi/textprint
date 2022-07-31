@@ -14,5 +14,5 @@ class BitcoinAddress(BasePattern):
     * Bech32 addresses are a SegWit format starting with bc1
     """
 
-    REGEX_FORMAT_STRING = r"^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$"
+    REGEX_FORMAT_STRING = r"\b(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}\b"
     TYPE = PatternTypes.BITCOIN_ADDRESS
