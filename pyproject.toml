@@ -1,7 +1,8 @@
 [tool.poetry]
 name = "textprint"
 version = "0.1.0"
-description = ""
+description = "Regex patterns. Simplified."
+packages = [{ include = "textprint" }]
 authors = ["Shadi Boomi <shadi.boomi@gmail.com>"]
 readme = "README.md"
 
