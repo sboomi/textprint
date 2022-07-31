@@ -1,7 +1,8 @@
-from typing import List
-from .pattern_list import PatternTypes
-from .base import BasePattern
 from datetime import date
+from typing import List
+
+from .base import BasePattern
+from .pattern_list import PatternTypes
 
 
 class Date(BasePattern):

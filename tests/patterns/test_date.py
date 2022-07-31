@@ -1,5 +1,6 @@
-from textprint.patterns import Date
 from datetime import date
+
+from textprint.patterns import Date
 
 
 def test_dates():

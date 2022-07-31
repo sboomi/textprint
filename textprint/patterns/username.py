@@ -1,4 +1,5 @@
 import re
+
 from .base import BasePattern
 from .pattern_list import PatternTypes
 

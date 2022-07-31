@@ -1,5 +1,6 @@
 import re
 from typing import List
+
 from .pattern_list import PatternTypes
 
 

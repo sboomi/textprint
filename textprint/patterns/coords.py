@@ -1,7 +1,8 @@
-from typing import List
-from .pattern_list import PatternTypes
-from .base import BasePattern
 from collections import namedtuple
+from typing import List
+
+from .base import BasePattern
+from .pattern_list import PatternTypes
 
 Point = namedtuple("Point", ["lat", "lon"])
 

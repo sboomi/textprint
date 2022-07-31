@@ -1,4 +1,4 @@
-from textprint.patterns import Username, DiscordUsername
+from textprint.patterns import DiscordUsername, Username
 
 
 def test_series_of_usernames():

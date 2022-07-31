@@ -1,6 +1,7 @@
 import re
-from .pattern_list import PatternTypes
+
 from .base import BasePattern
+from .pattern_list import PatternTypes
 
 
 class Hashtag(BasePattern):

@@ -1,7 +1,8 @@
+import re
 from typing import List, Optional
+
 from .base import BasePattern
 from .pattern_list import PatternTypes
-import re
 
 
 class PhoneNumber(BasePattern):
