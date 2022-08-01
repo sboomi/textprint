@@ -5,6 +5,7 @@ description = "Regex patterns. Simplified."
 packages = [{ include = "textprint" }]
 authors = ["Shadi Boomi <shadi.boomi@gmail.com>"]
 readme = "README.md"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
