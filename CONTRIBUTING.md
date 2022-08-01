@@ -4,8 +4,8 @@
 
 The only requirements needed to start the packages in development mode are
 
-* [Poetry](https://python-poetry.org/)
-* Python 3.9 and above
+- [Poetry](https://python-poetry.org/)
+- Python 3.9 and above
 
 You can then fork the repository on your account and clone it on your local computer.
 
@@ -35,11 +35,11 @@ Once everything is settled, you can start coding. 😉
 
 By definition, every module inherits from `textprint.patterns.base.BasePattern`. If you want to design a new module, you can override the following:
 
-* `REGEX_FORMAT_STRING` which is the regex pattern meant to be compiled.
-* The constructor `__init__` if you need extra parameters like a username.
-    * In the same vein, you can override `flags` in `super().__init__(flags)`, if you need an extra flag like `re.I`.
-* Abstract method `_compile` can be overriden especially in the case where instance arguments are provided.
-* `TYPE` which needs an enum value from `textprint.patterns.pattern_list.PatternTypes`. Feel free to add your own if you think your pattern isn't related to any of the above components.
+- `REGEX_FORMAT_STRING` which is the regex pattern meant to be compiled.
+- The constructor `__init__` if you need extra parameters like a username.
+  - In the same vein, you can override `flags` in `super().__init__(flags)`, if you need an extra flag like `re.I`.
+- Abstract method `_compile` can be overriden especially in the case where instance arguments are provided.
+- `TYPE` which needs an enum value from `textprint.patterns.pattern_list.PatternTypes`. Feel free to add your own if you think your pattern isn't related to any of the above components.
 
 Finally do not forget to document and import your module in the `__init__.py` file.
 
@@ -74,4 +74,22 @@ class Username(BasePattern):
             "max_len", str(self.max_len)
         )
 
+```
+
+After editing code, don't forget to run some checks using the following commands:
+
+```shell
+poetry run black .
+poetry run isort . --profile black
+poetry run flake8 .
+poetry run bandit .
+poetry run safety check
+```
+
+## Generate docs
+
+The docs can be generated with the following command:
+
+```shell
+poetry run sphinx-apidoc -o docs textprint/
 ```

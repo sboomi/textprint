@@ -6,13 +6,12 @@
 Welcome to Textprint's documentation!
 =====================================
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: Contents:
-.. automodule:: textprint
-   :members:
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-
+   readme
+   modules
 
 Indices and tables
 ==================

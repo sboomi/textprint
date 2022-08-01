@@ -1,7 +1,8 @@
 """Textprint
 ==============
 
-Detects familiar patterns in your text data
+Detects familiar patterns in your text data to avoid 
+tiresome regex expressions
 """
 from .patterns import *
 
