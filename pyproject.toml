@@ -6,6 +6,20 @@ packages = [{ include = "textprint" }]
 authors = ["Shadi Boomi <shadi.boomi@gmail.com>"]
 readme = "README.md"
 license = "MIT"
+repository = "https://github.com/sboomi/textprint"
+documentation = "http://textprint.readthedocs.io/"
+classifiers = [
+    "Topic :: Utilities",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = [
+    "text", "regex"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/sboomi/textprint/issues"
+"Wiki" = "https://github.com/sboomi/textprint/wiki"
 
 [tool.poetry.dependencies]
 python = "^3.9"
