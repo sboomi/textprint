@@ -3,6 +3,8 @@ from .pattern_list import PatternTypes
 
 
 class IpAddress(BasePattern):
+    """Matches against IPV4 (or IPV6 if enabled) IP addresses"""
+
     TYPE = PatternTypes.IP_ADDRESS
     REGEX_FORMAT_STRING = (
         r"(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)"

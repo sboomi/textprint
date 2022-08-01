@@ -5,6 +5,8 @@ from .pattern_list import PatternTypes
 
 
 class HyphenWordBreak(BasePattern):
+    """Detects any hyphen word break in the text data."""
+
     TYPE = PatternTypes.HYPHEN_WORD_BREAK
     REGEX_FORMAT_STRING = r"[a-zA-Z][\-]$[\n][a-zA-Z]"
     REGEX_SUBSTITUTION_PAIR = (r"([a-zA-Z])[\-]$[\n]([a-zA-Z])", "\\1\\2")

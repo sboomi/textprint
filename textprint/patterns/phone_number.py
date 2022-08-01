@@ -6,7 +6,11 @@ from .pattern_list import PatternTypes
 
 
 class PhoneNumber(BasePattern):
-    """Pattern checking against a phone number (regular or E164)"""
+    """Pattern checking against a phone number (regular or E164)
+
+    :param is_e164: turns on the e164 option, defaults to False
+    :type is_e164: Optional[bool], optional
+    """
 
     REGEX_FORMAT_STRING = r"[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
     REGEX_FORMAT_STRING_E164 = r"\+[1-9]\d{1,14}"
