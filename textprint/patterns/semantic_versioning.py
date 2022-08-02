@@ -16,11 +16,17 @@ class SemanticVersioning(BasePattern):
     """Matches a semantic versioning pattern
     according to https://semver.org/
 
-    This is a strict versioning only working as a validator. The version must be on separate lines.
+    This is a strict versioning only working as a validator. The version must be
+    on separate lines.
     """
 
     TYPE = PatternTypes.SEMANTIC_VERSIONING
-    REGEX_FORMAT_STRING = r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"
+    REGEX_FORMAT_STRING = (
+        r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0"
+        r"|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*"
+        r"|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+"
+        r"(?:\.[0-9a-zA-Z-]+)*))?$"
+    )
 
     def as_object(self, target_string: str) -> List[Version]:
         """Returns each validated version as an object featuring each of the groups:
@@ -31,7 +37,8 @@ class SemanticVersioning(BasePattern):
         4. Prerelease
         5. Metadata
 
-        :param target_string: The version to look over. Should be strict (no spaces or words in between)
+        :param target_string: The version to look over. Should be strict (no spaces
+            or words in between)
         :type target_string: str
         :return: List of NamedTuples with each parameter
         :rtype: List[Version]
