@@ -3,12 +3,12 @@ from textprint.patterns import PanFromGstin
 
 def test_valid_pans():
     pans = [
-"22ABCDE1234F1Z5",
-"11GHIJK1234L1Z5",
-"33PQRST5678L1Z5",
-"34UVWXY5678L1Z5",
-"35PQRST5678L1Z5",
-"22ABCDE1234F1Z5",
+        "22ABCDE1234F1Z5",
+        "11GHIJK1234L1Z5",
+        "33PQRST5678L1Z5",
+        "34UVWXY5678L1Z5",
+        "35PQRST5678L1Z5",
+        "22ABCDE1234F1Z5",
     ]
 
     pan_gstin_parser = PanFromGstin()

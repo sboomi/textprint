@@ -7,7 +7,9 @@ class UrlSlug(BasePattern):
 
     A slug is the endpoint of an URL, usually indicating a unique object
     like the user's ID, or the user's post's ID.
+
+    This parser only works for individual slugs (no spaces or words in-between)
     """
 
     TYPE = PatternTypes.URL_SLUG
-    REGEX_FORMAT_STRING = r"[a-z0-9]+(?:-[a-z0-9]+)*"
+    REGEX_FORMAT_STRING = r"^[a-z0-9]+(?:-[a-z0-9]+)*$"

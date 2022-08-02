@@ -5,7 +5,7 @@ def test_addresses():
     addresses = {
         "01:02:03:04:ab:cd": True,
         "definitely:not:a:mac": False,
-        "01-02-03-04-ab-cd": False
+        "01-02-03-04-ab-cd": False,
     }
 
     mac_address_parser = MacAddress()

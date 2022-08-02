@@ -3,17 +3,17 @@ from textprint.patterns import Password
 
 def test_passwords():
     passwords = {
-"lorem": False,
-"ipsum": False,
-"gr3at@3wdsG": True,
-"a": False,
-"ab": False,
-"abc": False,
-"abcd": False,
-"abcde": False,
-"john doe": False,
-"johnny": False,
-"abcdefghijklmnopqrst": False
+        "lorem": False,
+        "ipsum": False,
+        "gr3at@3wdsG": True,
+        "a": False,
+        "ab": False,
+        "abc": False,
+        "abcd": False,
+        "abcde": False,
+        "john doe": False,
+        "johnny": False,
+        "abcdefghijklmnopqrst": False,
     }
 
     password_validator = Password(8)

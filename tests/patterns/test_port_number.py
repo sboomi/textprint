@@ -2,12 +2,7 @@ from textprint.patterns import PortNumber
 
 
 def test_port_numbers():
-    port_numbers = {
-"8080": True,
-"3000": True,
-"65535": True,
-"65536": False
-    }
+    port_numbers = {"8080": True, "3000": True, "65535": True, "65536": False}
 
     port_number_parser = PortNumber()
 
