@@ -24,6 +24,8 @@ def test_dates():
         if is_date:
             assert len(match) == 1
             assert match[0] == dates
+        else:
+            assert len(match) == 0
 
 
 def test_dates_with_date_objects():

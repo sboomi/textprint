@@ -19,3 +19,5 @@ def test_credit_card_numbers():
         if is_cc_number:
             assert len(match) == 1
             assert match[0] == number
+        else:
+            assert len(match) == 0

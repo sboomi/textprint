@@ -24,6 +24,8 @@ def test_series_of_phone_numbers():
         if is_phone_number:
             assert len(matched_strs) == 1
             assert matched_strs[0] == phone_number
+        else:
+            assert len(matched_strs) == 0
 
 
 def test_series_of_phone_numbers_e164():
@@ -47,3 +49,5 @@ def test_series_of_phone_numbers_e164():
         if is_phone_number:
             assert len(matched_strs) == 1
             assert matched_strs[0] == phone_number
+        else:
+            assert len(matched_strs) == 0

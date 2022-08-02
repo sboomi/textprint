@@ -20,6 +20,8 @@ def test_series_of_ipv4():
         if is_ip_v4:
             assert len(match) == 1
             assert match[0] == ip
+        else:
+            assert len(match) == 0
 
 
 def test_series_of_ipv6():
@@ -37,3 +39,5 @@ def test_series_of_ipv6():
         if is_ip_v4:
             assert len(match) == 1
             assert match[0] == ip
+        else:
+            assert len(match) == 0

@@ -25,6 +25,8 @@ def test_geographic_coordinates():
         if is_lat_lon:
             assert len(match) == 1
             assert match[0] == coords
+        else:
+            assert len(match) == 0
 
 
 def test_geographic_coordinates_with_point_objects():

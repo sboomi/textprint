@@ -18,3 +18,5 @@ def test_ticket_entries():
         if is_jira_ticket:
             assert len(match) == 1
             assert match[0] == ticket
+        else:
+            assert len(match) == 0

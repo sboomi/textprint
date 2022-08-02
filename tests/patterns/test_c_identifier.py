@@ -19,3 +19,5 @@ def test_c_identifiers():
         if is_c_like:
             assert len(match) == 1
             assert match[0] == token
+        else:
+            assert len(match) == 0

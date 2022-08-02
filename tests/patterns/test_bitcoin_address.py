@@ -22,3 +22,5 @@ def test_is_bitcoin_address():
         if is_bitcoin_address:
             assert len(match) == 1
             assert match[0] == address
+        else:
+            assert len(match) == 0
