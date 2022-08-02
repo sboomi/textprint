@@ -11,11 +11,9 @@ documentation = "http://textprint.readthedocs.io/"
 classifiers = [
     "Topic :: Utilities",
     "Topic :: Text Processing :: Linguistic",
-    "Topic :: Software Development :: Libraries :: Python Modules"
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-keywords = [
-    "text", "regex"
-]
+keywords = ["text", "regex"]
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/sboomi/textprint/issues"
@@ -24,6 +22,11 @@ keywords = [
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.28.1"
+tqdm = "^4.64.0"
+typer = { extras = ["all"], version = "^0.6.1" }
+
+[tool.poetry.scripts]
+textprint = "textprint.cli:app"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
